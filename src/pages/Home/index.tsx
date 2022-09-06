@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import jwtDecode from 'jwt-decode';
 import { useEffect, useState } from 'react';
-import { FaBook, FaPlus } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
+import { HiOutlineCash } from 'react-icons/hi';
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
@@ -183,7 +184,11 @@ export function Home({ token }: HomeProps) {
 							spacing={['12px', '20px', '20px', '20px']}
 						>
 							<AmountCard type="Total" amount={calcTotals('Total')} />
-							<HStack spacing="20px" w="fit-content" align="center">
+							<HStack
+								spacing="20px"
+								w={['full', 'fit-content', 'fit-content', 'fit-content']}
+								align="center"
+							>
 								<AmountCard type="Entradas" amount={calcTotals('Entrada')} />
 								<AmountCard type="Saídas" amount={calcTotals('Saída')} />
 							</HStack>
@@ -205,7 +210,7 @@ export function Home({ token }: HomeProps) {
 							Novo registro
 						</Button>
 					</Flex>
-					<SlideFade in={userEntries.length > 0} style={{ width: '100%' }}>
+					<SlideFade in={!isLoading} style={{ width: '100%' }}>
 						<VStack w="full" align="flex-start" spacing="8px">
 							{userEntries.length === 0 ? (
 								<Flex
@@ -216,7 +221,7 @@ export function Home({ token }: HomeProps) {
 									w="full"
 									minH="300px"
 								>
-									<Icon as={FaBook} mb="12px" boxSize="24px" />
+									<Icon as={HiOutlineCash} mb="12px" boxSize="42px" />
 									<Text whiteSpace="pre" textAlign="center">
 										Você ainda não tem registros!{'\n'}Adicione um clicando na
 										opção acima.

@@ -86,15 +86,19 @@ export function Profile({ token, setToken }: ProfileProps) {
 		setIsDeleting(true);
 
 		try {
-			await api.delete('/users', { headers: { authorization: token || '' } });
+			const { username } = jwtDecode(token || '') as JWTPAyload;
+			await api.delete(`/users/${username}`, {
+				headers: { authorization: token || '' },
+			});
 			sessionStorage.removeItem('token');
 			setToken('');
 
 			navigate('/login');
-		} catch (error) {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		} catch (error: any) {
 			toast({
 				title: 'Erro',
-				description: 'Ocorreu um erro ao tentar deletar a conta',
+				description: `Ocorreu um erro ao tentar deletar a conta: ${error.message}`,
 				status: 'error',
 				duration: 9000,
 				isClosable: true,

@@ -127,7 +127,7 @@ export function UserDataForm({
 				</FormControl>
 
 				<FormControl w="full" isInvalid={errors.username !== undefined}>
-					<FormLabel>Username</FormLabel>
+					<FormLabel>Nome de usuário</FormLabel>
 					<Controller
 						control={control}
 						name="username"

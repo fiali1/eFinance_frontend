@@ -80,8 +80,8 @@ export function ValueForm({
 								onChange={onChange}
 								placeholder="Tipo"
 							>
-								<option value="Entrada">Entrada</option>
-								<option value="Saída">Saída</option>
+								<option value="Entrada">Entrada (Recebeu)</option>
+								<option value="Saída">Saída (Gastou)</option>
 							</Select>
 						)}
 					/>

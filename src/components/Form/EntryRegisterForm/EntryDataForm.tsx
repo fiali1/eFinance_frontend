@@ -107,7 +107,7 @@ export function EntryDataForm({
 				</FormControl>
 
 				<FormControl w="full" isInvalid={errors.tag !== undefined}>
-					<FormLabel>Tag*</FormLabel>
+					<FormLabel>Tag de categoria*</FormLabel>
 					<Controller
 						control={control}
 						name="tag"
@@ -118,13 +118,13 @@ export function EntryDataForm({
 								onChange={onChange}
 								placeholder="Tag"
 							>
-								<option value="Remuneração">Remuneração</option>
 								<option value="Saude">Saude</option>
-								<option value="Educacao">Educacao</option>
 								<option value="Alimentação">Alimentação</option>
-								<option value="Contas">Contas</option>
-								<option value="Investimentos">Investimentos</option>
+								<option value="Educação">Educação</option>
 								<option value="Lazer">Lazer</option>
+								<option value="Contas">Contas</option>
+								<option value="Remuneração">Remuneração</option>
+								<option value="Investimentos">Investimentos</option>
 								<option value="Outros">Outros</option>
 							</Select>
 						)}

@@ -125,11 +125,11 @@ export function EntryRegister({ token, update = false }: EntryRegisterProps) {
 					});
 					const { data } = response;
 					setFormData(data);
-				} catch (error) {
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
+				} catch (error: any) {
 					toast({
 						title: 'Erro',
-						description:
-							'Ocorreu um erro ao carregar as informações do servidor',
+						description: `Ocorreu um erro ao carregar as informações do servidor: ${error.message}`,
 						status: 'error',
 						duration: 5000,
 						isClosable: true,

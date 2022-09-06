@@ -1,15 +1,15 @@
 # e-Finance
-A sample React JS frontend for Node.js/Express CRUD application with Firestore as database.
+Frontend React JS para aplicação-exemplo Node.js/Express CRUD com Firestore como database.
 
-Manage your expenses and income with entries listing and balance output.
+Gerencie gastos e renda com uma listagem de registros e apresentação do balanço.
 
 ### Libs: 
 * **Interface:** Chakra UI
-* **Navigation:** React Router DOM v6
-* **API connection:** Axios
-* **Forms & validation:** React Hook Form with Yup
-* **Basic auth & decryption:** JwtDecode
-### Screens: 
+* **Navegação:** React Router DOM v6
+* **Conexão com API:** Axios
+* **Forms & validação:** React Hook Form with Yup
+* **Autenticação básica & decryption:** JwtDecode
+### Telas: 
 * Login
 * Register user (create and update)
 * Home
@@ -20,4 +20,6 @@ Manage your expenses and income with entries listing and balance output.
 <hr>
 <br>
 
-### Backend repo: https://github.com/fiali1/eFinance_backend
+### **Backend repo:** https://github.com/fiali1/eFinance_backend
+
+### **Firebase Hosting com backend Heroku:** https://e-finance-6a22e.web.app/
