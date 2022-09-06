@@ -118,7 +118,7 @@ export function EntryDataForm({
 								onChange={onChange}
 								placeholder="Tag"
 							>
-								<option value="Saude">Saude</option>
+								<option value="Saúde">Saúde</option>
 								<option value="Alimentação">Alimentação</option>
 								<option value="Educação">Educação</option>
 								<option value="Lazer">Lazer</option>
